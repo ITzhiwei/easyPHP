@@ -1,0 +1,88 @@
+[
+    {
+        "name": "lipowei/config",
+        "version": "v1.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ITzhiwei/Config.git",
+            "reference": "150b5ec7500840cc63c79e42135b682cb112e6a7"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ITzhiwei/Config/zipball/150b5ec7500840cc63c79e42135b682cb112e6a7",
+            "reference": "150b5ec7500840cc63c79e42135b682cb112e6a7",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "time": "2019-08-08T16:23:58+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "lipowei\\configClass\\": "configClass/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "wuzhiwei",
+                "email": "2394599321@qq.com"
+            }
+        ],
+        "description": "实现读取任意配置目录下的配置，支持多级获取，使用方法看下面"
+    },
+    {
+        "name": "lipowei/db",
+        "version": "1.1",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ITzhiwei/mysql.git",
+            "reference": "8c4c6bd5c0de9bfcc29ab27010a66bd317b38b51"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ITzhiwei/mysql/zipball/8c4c6bd5c0de9bfcc29ab27010a66bd317b38b51",
+            "reference": "8c4c6bd5c0de9bfcc29ab27010a66bd317b38b51",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "lipowei/config": "^1.0",
+            "php": ">=5.4.0"
+        },
+        "time": "2020-01-18T03:44:06+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "lipowei\\Db\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "zhiwei",
+                "email": "2394599321@qq.com"
+            }
+        ],
+        "description": "mysql 数据库操作；安全：全程预处理模式防SQL注入，自动添加反引号防表字段与关键词冲突；支持主从分布，支持配置参数保存；本类库注释多，可供学习使用；"
+    }
+]

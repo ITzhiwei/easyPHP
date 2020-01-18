@@ -1,0 +1,6 @@
+{
+    "require": {
+        "lipowei/config": "^1.0",
+        "lipowei/db": "^1.1"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "require": {
+        "lipowei/config": "dev-master"
+    }
+}
