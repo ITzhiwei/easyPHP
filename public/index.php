@@ -2,19 +2,7 @@
 
 namespace wei;
 //PHP错误记录
-register_shutdown_function(function(){
-        $error = error_get_last();
-        if($error !== null){
-            $msg = $error['message'];
-            $file = $error['file'].':'.$error['line'];
-            $Logtime = date('Y-m-d H:i:s', time());
-            $errorLog = "【{$Logtime}】".$msg."\r\n".$file;
-            $fileName = substr($Logtime,0, 10);
-            $myfile = fopen(__DIR__."/../log/php/$fileName.txt", "a");
-            fwrite($myfile, $errorLog."\r\n\r\n");
-            fclose($myfile);
-        };
-});
+require __DIR__ . '/../wei/error.php';
 // 加载composer
 require __DIR__ . '/../vendor/autoload.php';
 // 加载URL处理文件
