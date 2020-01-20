@@ -5,7 +5,9 @@
 
 return [
     // URL伪静态后缀，一维数组
-    'url_html_suffix'       => ['html', 'htm'],
+    'urlHtmlSuffix'       => ['html', 'htm'],
+    //路由自定义
+    'urlHtmlCustomize'      => [],
     //自动路由多入口白名单；
     'door'                  => [
                                 'index'=>__DIR__.'/../application/',
