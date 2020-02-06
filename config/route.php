@@ -27,6 +27,7 @@ return [
     ],
      /*
       * 自定义一级目录入口
+      * 若使用自定义入口，url的路由参数是4个，如非自定义是 index/user/info/id/1 自定义是 selectApp2/index/user/info/id/1
       * 第一个值是布尔值，为false时表示只针对某些域名，为 true 时表示所有域名都生效
       * 第2个值是入口（从 door 中映射目录）
       * 第3个值是数组，当第一个值是 false 才有效，表示哪些域名启用这额外的项目
@@ -34,7 +35,7 @@ return [
     'assignEntranceData'    => [
         //解释如：selectApp2：当遇到 www.xxx.com/selectApp2(或www.xxx.comselectApp2/) 的url时触发检测
         'selectApp2'=>[false, 'application2', ['www.wei.com', 'www.weib.com', 'www.weic.com']],
-        //所有域名在遇到 www.url.com/app3/ 开头的url时，会直接选定 app3 入口
+        //所有域名在遇到 www.url.com/app3/ 开头的url时，会直接选定 app3 入口；
         'lipowei'=>[true, 'app3']
     ]
 
