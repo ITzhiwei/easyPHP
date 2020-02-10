@@ -47,16 +47,16 @@
         },
         {
             "name": "lipowei/db",
-            "version": "1.1",
+            "version": "1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ITzhiwei/mysql.git",
-                "reference": "8c4c6bd5c0de9bfcc29ab27010a66bd317b38b51"
+                "reference": "1eb834544d3540d43362628f3006fa714993e6cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ITzhiwei/mysql/zipball/8c4c6bd5c0de9bfcc29ab27010a66bd317b38b51",
-                "reference": "8c4c6bd5c0de9bfcc29ab27010a66bd317b38b51",
+                "url": "https://api.github.com/repos/ITzhiwei/mysql/zipball/1eb834544d3540d43362628f3006fa714993e6cf",
+                "reference": "1eb834544d3540d43362628f3006fa714993e6cf",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -67,7 +67,7 @@
             },
             "require": {
                 "lipowei/config": "^1.0",
-                "php": ">=5.4.0"
+                "php": ">=5.6.0"
             },
             "type": "library",
             "autoload": {
@@ -85,8 +85,8 @@
                     "email": "2394599321@qq.com"
                 }
             ],
-            "description": "mysql 数据库操作；安全：全程预处理模式防SQL注入，自动添加反引号防表字段与关键词冲突；支持主从分布，支持配置参数保存；本类库注释多，可供学习使用；",
-            "time": "2020-01-18T03:44:06+00:00"
+            "description": "mysql 数据库操作；安全：全程预处理模式防SQL注入，自动添加反引号防表字段与关键词冲突；支持主从分布，支持配置参数保存；",
+            "time": "2020-02-10T06:41:44+00:00"
         }
     ],
     "packages-dev": [],

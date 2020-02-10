@@ -12,6 +12,8 @@ class index extends controller{
         //var_dump($row);
         echo 'hello';
 
+        
+
         var_dump($this->param);
 
 
