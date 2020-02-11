@@ -1,17 +1,17 @@
 [
     {
         "name": "lipowei/config",
-        "version": "1.1",
-        "version_normalized": "1.1.0.0",
+        "version": "1.2",
+        "version_normalized": "1.2.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/ITzhiwei/Config.git",
-            "reference": "878906c3ae0cba2fe2258c90caa35748566040db"
+            "reference": "028e5fb5ac38434dd3e9f29efa1e4c44548dfc95"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/ITzhiwei/Config/zipball/878906c3ae0cba2fe2258c90caa35748566040db",
-            "reference": "878906c3ae0cba2fe2258c90caa35748566040db",
+            "url": "https://api.github.com/repos/ITzhiwei/Config/zipball/028e5fb5ac38434dd3e9f29efa1e4c44548dfc95",
+            "reference": "028e5fb5ac38434dd3e9f29efa1e4c44548dfc95",
             "shasum": "",
             "mirrors": [
                 {
@@ -20,12 +20,12 @@
                 }
             ]
         },
-        "time": "2020-02-11T09:35:28+00:00",
+        "time": "2020-02-11T16:07:32+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "lipowei\\Db\\": "configClass/"
+                "lipowei\\configClass\\": "configClass/"
             }
         },
         "notification-url": "https://packagist.org/downloads/",

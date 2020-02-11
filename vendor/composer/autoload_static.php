@@ -9,15 +9,19 @@ class ComposerStaticInit4db721031d31ddd1dadcab5f3d0fb81e
     public static $prefixLengthsPsr4 = array (
         'l' => 
         array (
+            'lipowei\\configClass\\' => 20,
             'lipowei\\Db\\' => 11,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'lipowei\\Db\\' => 
+        'lipowei\\configClass\\' => 
         array (
             0 => __DIR__ . '/..' . '/lipowei/config/configClass',
-            1 => __DIR__ . '/..' . '/lipowei/db/src',
+        ),
+        'lipowei\\Db\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/lipowei/db/src',
         ),
     );
 
