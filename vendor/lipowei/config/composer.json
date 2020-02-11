@@ -1,19 +1,19 @@
 {
     "name": "lipowei/config",
-    "description": "实现读取任意配置目录下的配置，支持多级获取，使用方法看下面",
+    "description": "配置类，实现读取任意配置目录下的配置，支持多级获取",
     "type": "library",
     "license": "MIT",
+    "version": "1.1",
     "autoload": {
-      "psr-4": {
-        "lipowei\\configClass\\": "configClass/"
-      }
+        "psr-4": {
+            "lipowei\\Db\\": "configClass/"
+        }
     },
     "authors": [
         {
-            "name": "wuzhiwei",
+            "name": "zhiwei",
             "email": "2394599321@qq.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {}
 }
