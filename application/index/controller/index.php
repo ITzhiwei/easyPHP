@@ -18,18 +18,16 @@ class index extends controller{
 
 
 
-        /*
-        $a = Factory::get('index\index\controller\index2', 'sa');
-        var_dump($a);
-        $a = Factory::get('index\index\controller\index2');
-        var_dump($a);
-        /*
-        $a = new index2;
-        $a->index();
+        /* 调用其他控制器示例  Factory 第一个参数是控制器地址，第2个参数是单列管理中的别名，后面的参数是传入第一个参数的参数（即 ...index2 控制器的参数）
+        $a = Factory::get('index\index\controller\index2', 0, $this->param);
+        $a->fucName = 'hello';
+        //将用户请求结束后需要执行的内容交出来执行
         foreach ($a->fucArr as $value){
             $this->fucArr[] = $value;
         }
+        $a->run();
         */
+
     }
     
     

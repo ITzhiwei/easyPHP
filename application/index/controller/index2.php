@@ -11,6 +11,10 @@ class index2 extends controller{
        // var_dump($row);
         echo 'hello2';
     }
+
+    public function hello(){
+        echo 'index2 控制器的 hello 访问成功。';
+    }
     
     
     
