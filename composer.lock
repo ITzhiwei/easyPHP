@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "lipowei/config",
-            "version": "v1.0",
+            "version": "1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ITzhiwei/Config.git",
-                "reference": "150b5ec7500840cc63c79e42135b682cb112e6a7"
+                "reference": "878906c3ae0cba2fe2258c90caa35748566040db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ITzhiwei/Config/zipball/150b5ec7500840cc63c79e42135b682cb112e6a7",
-                "reference": "150b5ec7500840cc63c79e42135b682cb112e6a7",
+                "url": "https://api.github.com/repos/ITzhiwei/Config/zipball/878906c3ae0cba2fe2258c90caa35748566040db",
+                "reference": "878906c3ae0cba2fe2258c90caa35748566040db",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -29,7 +29,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "lipowei\\configClass\\": "configClass/"
+                    "lipowei\\Db\\": "configClass/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -38,12 +38,12 @@
             ],
             "authors": [
                 {
-                    "name": "wuzhiwei",
+                    "name": "zhiwei",
                     "email": "2394599321@qq.com"
                 }
             ],
-            "description": "实现读取任意配置目录下的配置，支持多级获取，使用方法看下面",
-            "time": "2019-08-08T16:23:58+00:00"
+            "description": "配置类，实现读取任意配置目录下的配置，支持多级获取",
+            "time": "2020-02-11T09:35:28+00:00"
         },
         {
             "name": "lipowei/db",

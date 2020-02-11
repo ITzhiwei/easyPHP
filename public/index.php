@@ -19,6 +19,7 @@ $param = $info[1];
 $ObjStr = "\\{$pathArr[0]}\\{$pathArr[1]}\\controller\\{$pathArr[2]}";
 
 $weiObj = new $ObjStr($param);
+$weiObj->fucName = $pathArr[3];
 $weiObj->{$pathArr[3]}();
 $weiObj->userAccessEndExecute();
 

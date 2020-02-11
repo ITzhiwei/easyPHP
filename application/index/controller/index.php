@@ -3,6 +3,7 @@ namespace index\index\controller;
 use wei\controller;
 use lipowei\Db\Db;
 use wei\Factory;
+use lipowei\configClass\Config;
 
 class index extends controller{
     
@@ -13,8 +14,8 @@ class index extends controller{
         echo 'hello';
 
         
+        $this->view(['aaa']);
 
-        var_dump($this->param);
 
 
         /*
@@ -22,9 +23,6 @@ class index extends controller{
         var_dump($a);
         $a = Factory::get('index\index\controller\index2');
         var_dump($a);
-        var_dump(Factory::$classArr);
-
-        echo 'hello';
         /*
         $a = new index2;
         $a->index();
