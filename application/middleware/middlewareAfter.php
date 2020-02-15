@@ -9,7 +9,6 @@ class middlewareAfter
      * @param mixed $oldData 程序执行完返回的数据，未被任何修改
      */
     public function handle($obj, $data, $oldData){
-        echo '<hr/>amg';
-        var_dump(__DIR__);
+
     }
 }
