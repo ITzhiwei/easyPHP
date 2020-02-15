@@ -42,7 +42,7 @@
 全局前置中间件（创建一级目录 middleware 包含 middlewareBefore.php）  
 一级目录前置中间件（在对应的一级目录内创建middleware 包含 middlewareBefore.php）  
 二级目录前置中间件（在对应的二级目录内创建middleware 包含 middlewareBefore.php）  
-* 后置中间件
+* 后置中间件  
 程序执行完毕后执行  
 可设置全局前置中间件（创建一级目录 middleware 包含 middlewareAfter.php）  
 一级目录后置中间件（在对应的一级目录内创建middleware 包含 middlewareAfter.php）  
