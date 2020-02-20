@@ -33,9 +33,9 @@ return [
       * 第3个值是数组，当第一个值是 false 才有效，表示哪些域名启用这额外的项目
       */
     'assignEntranceData'    => [
-        //解释如：selectApp2：当遇到 www.xxx.com/selectApp2(或www.xxx.comselectApp2/) 的url时触发检测
+        //解释如：selectApp2：当遇到 www.xxx.com/selectApp2(或www.xxx.com/selectApp2/) 的url时触发检测
         'selectApp2'=>[false, 'application2', ['www.wei.com', 'www.weib.com', 'www.weic.com']],
-        //所有域名在遇到 www.url.com/app3/ 开头的url时，会直接选定 app3 入口；
+        //所有域名在遇到 www.url.com/lipowei/ 开头的url时，会直接选定 app3 入口；
         'lipowei'=>[true, 'app3']
     ]
 

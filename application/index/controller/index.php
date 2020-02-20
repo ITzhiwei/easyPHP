@@ -8,7 +8,9 @@ use lipowei\configClass\Config;
 class index extends controller{
 
     public function index(){
-
+        $a1=array("red","green");
+        $a2=array("blue","yellow");
+        print_r(array_merge($a1,$a2));
         //return $this->view(['aaa']);
 
          /* 调用其他控制器示例  Factory 第一个参数是控制器地址，第2个参数是单列管理中的别名，后面的参数是传入第一个参数的参数（即 ...index2 控制器的参数）
