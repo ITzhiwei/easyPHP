@@ -69,6 +69,6 @@ $this->fucArr[] = function() use ($phoneArr){
 安装 composer require lipowei/db  
 支持分布式、读写分离等模式  
 全面预处理、自动添加反引号  
-mysql 错误日志记录  
+mysql 错误日志记录、不同域名可设置不同的链接参数    
 # php 错误日志记录
 与 mysql 错误分别记录不同的 log 文件
