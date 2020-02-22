@@ -56,8 +56,8 @@ $res = Db::table('article')->insert(['title'=>$title, 'content'=>$content, 'user
 //获取单个数据，下面真实执行语句： SELECT `title` FROM `article` WHERE `id`=50 LIMIT 0,1  
 $title = Db::table('article')->where('id', 50)->value('title');
 
-//获取单行数据，返回的是一维数组 ['title'=>'标题', ...]
-$article = Db::table('article')->where('id', 50)->select('*', false);
+//获取单行数据，返回的是一维数组 ['title'=>'标题', 'content'=>'文章内容']
+$article = Db::table('article')->where('id', 50)->find('title,content');
 
 //更新 id<50 的行进行更新，返回受影响条数
 $res = Db::table('article')->where('id', '<', 50)->update(['title'=>'newTitle']);
@@ -147,9 +147,19 @@ Db::table('article a left join article_seo b on(a.id=b.article_id) left join use
 * $length 取多少行数据  
 
 **order($field, $rank = 'ASC')**
-* string|array $field string:参与排序的字段 array:['num'=>'ASC', 'id'=>'ASC']
+* string|array $field string例子：->order('id', 'DESC')
 * string:default:asc $rank 如果设置为 false ,则可以使用自定义排序：$field = "FIELD('id', 7, 9, 5) ASC"
-
+```
+//字符串模式例子
+->order('time', 'desc');
+//数组模式例子
+DESC：
+->order(['time'=>'desc']) 或者 ->order(['time'], 'DESC')
+->order(['time'=>'desc'， 'id'=>'desc']) 或者 ->order(['time', 'id'], 'DESC')
+ASC：
+->order(['time']) 效果： time ASC
+->order(['time'， 'id']) 效果： time ASC,id ASC
+```
 **->group($group)**  
 * $group 字符串或数组，单个字段分组时使用字符串，多个字段分组使用数组
 
@@ -204,6 +214,10 @@ Db::table('users')->setInc('money', 5, true);//全部用户的余额增加5
 **->select($field = '\*', $more = true)**  
 * $field 是需要查询的字段，默认是所有，即\*   
 * $more 默认为true，查询多行，返回二位数组结果集，设置为false时即为查询单行，即 LIMIT 0,1  返回一维数组结果集 
+
+**->find($field = '\*')**
+* 注：find 是单行查询，效果等同 ->select($field, false)
+* $field 是需要查询的字段，默认是所有，即\*   
 
 **->value($field)**
 ```

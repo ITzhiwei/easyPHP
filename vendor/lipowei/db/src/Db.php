@@ -127,8 +127,7 @@ class Db{
         $sqlCDUS = strtolower(substr(trim($sqlStr), 0, 6));
         $config = self::$config;
         if(empty($config)){
-            $configFileName = self::$configFileName;
-            $config = Config::pull("$configFileName.connections.mysql");
+            $config = self::getSqlConfig();
         };
         if($sqlCDUS == 'select' && $config['deploy'] == 1 && $config['rwSeparate'] && self::$readMysql == null){
             //创建从数据库
@@ -178,11 +177,10 @@ class Db{
      * @throws \Exception 数据库连接失败时抛出错误
      */
     public static function crateSqlObj($connectConfig = [], $type = 'write'){
-        $configFileName = self::$configFileName;
         //获取配置信息
         if($connectConfig === []){
             //获取配置文件的信息
-            $connectConfig = Config::pull("$configFileName.connections.mysql");
+            $connectConfig = self::getSqlConfig();
         }else{
             if(self::$configSave){
                 //将配置信息写进文件中，下次使用时不用再输入配置信息
@@ -214,6 +212,20 @@ class Db{
         }else{
             self::$readMysql = $sqlObj;
         }
+    }
+
+    /**
+     * 当sqlf::$config不存在数据时会从这里拉取配置
+     */
+    private static function getSqlConfig(){
+        $configFileName = self::$configFileName;
+        $config = Config::pull("$configFileName.*");
+        if(isset($_SERVER['HTTP_HOST']) && isset($config[$_SERVER['HTTP_HOST']]['connections'])){
+            $connectConfig = $config[$_SERVER['HTTP_HOST']]['connections']['mysql'];
+        }else{
+            $connectConfig =  $config['connections']['mysql'];
+        }
+        return $connectConfig;
     }
     
     /**
@@ -384,6 +396,7 @@ class Db{
                 //经过上面一番清理，现在已经干净无N种情况的出现了
                 $table = implode('', $tableOneArr);
                 $tableFieldArr = explode(' ', $table);
+                //存放经过处理的$table字符串
                 $newTable = '';
                 foreach($tableFieldArr as $key=>$value){
                     if($value == ''){
@@ -394,7 +407,7 @@ class Db{
                         //第一个肯定是原始表名，因为trim已经将首尾空格清除
                         $newTable = '`'.$value.'`';
                     }else{
-                        //查看该字段是否属于join的特殊字符，若属于直接连接到新的字符串里面去
+                        //查看该字段是否属于join的特殊字符，若属于直接连接到新的字符串里面去  user a left join info b on(a.id=b.user_id)  user left join info on(user.id=info.user_id)
                         if(in_array($value, $joinStrArr)){
                             $newTable .= ' '.strtoupper($value);
                         }else{//不属于特殊字符，需要加反引号防冲突
@@ -1338,7 +1351,7 @@ class Db{
     }
     
     /**
-     * @param $field
+     * @param string|array $field string例子：->order('id', 'DESC')  array例子：->order(['time'=>'DESC', 'id'=>'DESC'])  简便模式：->order(['time', 'id'], 'DESC') 如果第2个参数不填写默认为ASC
      * @param string:default:asc $rank 如果设置为 false ,则可以使用自定义排序：$field=FIELD(fieldName, 'li', 'po', 'wei') ASC
      * @return $this
      */
@@ -1347,13 +1360,13 @@ class Db{
             $orderStr = 'ORDER BY ';
             $i = 1;
             foreach ($field as $key=>$value){
-                if($key === 0){
+                if( is_int($key) ){
                     $value = self::transform($value);
                     if($i == 1){
-                        $orderStr .= "$value ASC ";
+                        $orderStr .= "$value $rank ";
                         $i = 2;
                     }else{
-                        $orderStr .= ",$value ASC ";
+                        $orderStr .= ",$value $rank ";
                     }
                 }else{
                     $key = self::transform($key);
