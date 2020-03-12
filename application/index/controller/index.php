@@ -5,11 +5,15 @@ use wei\controller;
 use lipowei\Db\Db;
 use wei\Factory;
 use lipowei\configClass\Config;
+use extend\Test;
 
 class index extends controller{
 
     public function index(){
-        
+
+        $Test = new Test();
+        $Test->index();
+
         return $this->view(['aaa']);
 
          /* 调用其他控制器示例  Factory 第一个参数是控制器地址，第2个参数是单列管理中的别名，后面的参数是传入第一个参数的参数（即 ...index2 控制器的参数）
