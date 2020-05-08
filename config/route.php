@@ -11,7 +11,7 @@ return [
         //所有域名
         '*'=>[],
         //指定域名，如果指定域名与所有域名存在冲突，则自动以指定域名的为准（指定域名的设置优先）
-        'www.wei.com'=>['indes/:id'=>'index/index/index']
+        //'www.wei.com'=>['indes/:id'=>'index/index/index']
     ],
     //路径映射；自动路由一级目录入口白名单，并设置所指向的目录； 如 www.url.com/index/ 会找到  __DIR__.'/../application/' 一级目录进去
     'door'                  => [
