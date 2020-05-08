@@ -36,17 +36,25 @@
         'lipowei'=>[true, 'app3']
   ]
 ```
-# 中间件
-* 前置中间件  
-控制器执行前执行       
-全局前置中间件（创建一级目录 middleware 包含 middlewareBefore.php）  
-一级目录前置中间件（在对应的一级目录内创建middleware 包含 middlewareBefore.php）  
-二级目录前置中间件（在对应的二级目录内创建middleware 包含 middlewareBefore.php）  
-* 后置中间件  
-程序执行完毕后执行  
-可设置全局前置中间件（创建一级目录 middleware 包含 middlewareAfter.php）  
-一级目录后置中间件（在对应的一级目录内创建middleware 包含 middlewareAfter.php）  
-二级目录后置中间件（在对应的一级目录内创建middleware 包含 middlewareAfter.php）
+# 钩子
+* 前置钩子  
+位置：控制器请求方法执行前执行       
+全局前置钩子（创建项目目录下 hook  包含 hookBefore.php）  
+一级目录前置钩子（在对应的一级目录内创建 hook 包含 hookBefore.php）  
+二级目录前置钩子（在对应的二级目录内创建 hook 包含 hookBefore.php）  
+* 后置钩子  
+位置：返回数据给用户前的位置  
+可设置全局后置钩子（创建项目目录下 hook 包含 hookAfter.php）  
+一级目录后置钩子（在对应的一级目录内创建 hook 包含 hookAfter.php）  
+二级目录后置钩子（在对应的二级目录内创建 hook 包含 hookAfter.php）  
+* 结束后钩子
+位置：用户获取请求数据后在后台执行的钩子  
+````
+$this->fucArr[] = function() use ($phoneArr){
+                        //用户请求结束后，服务器继续执行耗时的任务
+                        ...
+                  }
+````
 # 工厂自助管理类
 自助单例管理类，可设置别名重新实例化  
 在获取类时，使用 wei\Factory::get($className) 可进行注入并自动单例管理，可用别名new新的类如::get($className , 'two')   
