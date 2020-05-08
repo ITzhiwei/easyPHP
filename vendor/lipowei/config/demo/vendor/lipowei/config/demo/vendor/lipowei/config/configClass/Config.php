@@ -43,10 +43,9 @@
         /**
          * 获取配置参数
          * @param string $name 支持多级获取，英文点号为分隔符，如果$name为空时返回所有已经读取的参数。没有 . 号，则直接读取默认app.php文件里面的参数
-         * @return string|array 若读取的配置存在时则返回配置值，不存在时默认 null ；默认值可修改 self::$default = null;
+         * @return 若读取的配置存在时则返回配置值，不存在时默认 null ；默认值可修改 self::$default = null;
          */
         public static function pull($name = ''){
-
             if(self::$obj){
                 $thisObj = self::$obj;
             }else{
@@ -64,10 +63,10 @@
         /**
          * 获取配置参数
          * @param string $name 支持多级获取，英文点号为分隔符，如果$name为空时返回所有已经读取的参数所在的配置文件的所有参数。没有 . 号，则直接读取默认app.php文件里面的参数
-         * @return string|array 若读取的配置存在时则返回配置值，不存在时默认 null ；默认值可修改 self::$default = null;
+         * @return 若读取的配置存在时则返回配置值，不存在时默认 null ；默认值可修改 self::$default = null;
          */
         public function get($name = null){
-
+            
             if(!$name){
                 //Data::$data[self::$path] 是为了多目录下读取文件防止配置名称重复
                 return !empty(Data::$data[self::$path])?Data::$data[self::$path]:Data::$data[self::$path] = '';
@@ -90,9 +89,13 @@
                 $config = Data::$data[self::$path];
                 
                 if(!isset($config[$paramArr[0]])){
+                    
                     if(is_file($configFileName)){
-                        $config[$paramArr[0]] = include($configFileName);
+                        
+                        $config[$paramArr[0]] = include_once($configFileName);
+                        
                         Data::$data[self::$path] = $config;
+                        
                         //查看是否存在该值
                         $exist = $this->exist($name);
                         if($exist !== false){
@@ -101,9 +104,11 @@
                         }else{
                             return self::$default;
                         }
+                        
                     }else{
                         return self::$default;
                     }
+                    
                 }else{
                     return self::$default;
                 }
@@ -127,16 +132,14 @@
             $topConfig = !empty(Data::$data[self::$path])?Data::$data[self::$path]:Data::$data[self::$path] = [];
             
             foreach($paramArr as $value){
-                if($value != '*') {
-                    if (!isset($topConfig[$value])) {
+                if(!isset($topConfig[$value])){
+                    return false;
+                }else{
+                    if($topConfig[$value] === ''){
                         return false;
-                    } else {
-                        if ($topConfig[$value] === '') {
-                            return false;
-                        }
                     }
-                    $topConfig = $topConfig[$value];
                 }
+                $topConfig = $topConfig[$value];
             }
             return $topConfig;
             

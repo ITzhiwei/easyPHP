@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "970e94a8b63fc5c34811cfeef6975197",
+    "content-hash": "40e24346701f984376130566cce83dac",
     "packages": [
         {
             "name": "lipowei/config",
-            "version": "1.2",
+            "version": "1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ITzhiwei/Config.git",
-                "reference": "028e5fb5ac38434dd3e9f29efa1e4c44548dfc95"
+                "reference": "5210b7ca1ba18337533a86ae4351837f700b4e84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ITzhiwei/Config/zipball/028e5fb5ac38434dd3e9f29efa1e4c44548dfc95",
-                "reference": "028e5fb5ac38434dd3e9f29efa1e4c44548dfc95",
+                "url": "https://api.github.com/repos/ITzhiwei/Config/zipball/5210b7ca1ba18337533a86ae4351837f700b4e84",
+                "reference": "5210b7ca1ba18337533a86ae4351837f700b4e84",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -43,20 +43,20 @@
                 }
             ],
             "description": "配置类，实现读取任意配置目录下的配置，支持多级获取",
-            "time": "2020-02-11T16:07:32+00:00"
+            "time": "2020-05-08T07:46:58+00:00"
         },
         {
             "name": "lipowei/db",
-            "version": "1.7",
+            "version": "1.92",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ITzhiwei/mysql.git",
-                "reference": "9871adda9fc2ff5716a219d61bd105ccc99b7311"
+                "reference": "6e38bc2c0c099121f46cea49bee18df39b82ceeb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ITzhiwei/mysql/zipball/9871adda9fc2ff5716a219d61bd105ccc99b7311",
-                "reference": "9871adda9fc2ff5716a219d61bd105ccc99b7311",
+                "url": "https://api.github.com/repos/ITzhiwei/mysql/zipball/6e38bc2c0c099121f46cea49bee18df39b82ceeb",
+                "reference": "6e38bc2c0c099121f46cea49bee18df39b82ceeb",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -86,7 +86,7 @@
                 }
             ],
             "description": "mysql 数据库操作；安全：全程预处理模式防SQL注入，自动添加反引号防表字段与关键词冲突；支持主从分布，支持配置参数保存；",
-            "time": "2020-03-02T01:21:19+00:00"
+            "time": "2020-04-23T14:12:50+00:00"
         }
     ],
     "packages-dev": [],

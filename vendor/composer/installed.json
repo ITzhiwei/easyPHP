@@ -1,17 +1,17 @@
 [
     {
         "name": "lipowei/config",
-        "version": "1.2",
-        "version_normalized": "1.2.0.0",
+        "version": "1.3",
+        "version_normalized": "1.3.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/ITzhiwei/Config.git",
-            "reference": "028e5fb5ac38434dd3e9f29efa1e4c44548dfc95"
+            "reference": "5210b7ca1ba18337533a86ae4351837f700b4e84"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/ITzhiwei/Config/zipball/028e5fb5ac38434dd3e9f29efa1e4c44548dfc95",
-            "reference": "028e5fb5ac38434dd3e9f29efa1e4c44548dfc95",
+            "url": "https://api.github.com/repos/ITzhiwei/Config/zipball/5210b7ca1ba18337533a86ae4351837f700b4e84",
+            "reference": "5210b7ca1ba18337533a86ae4351837f700b4e84",
             "shasum": "",
             "mirrors": [
                 {
@@ -20,7 +20,7 @@
                 }
             ]
         },
-        "time": "2020-02-11T16:07:32+00:00",
+        "time": "2020-05-08T07:46:58+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -42,17 +42,17 @@
     },
     {
         "name": "lipowei/db",
-        "version": "1.7",
-        "version_normalized": "1.7.0.0",
+        "version": "1.92",
+        "version_normalized": "1.92.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/ITzhiwei/mysql.git",
-            "reference": "9871adda9fc2ff5716a219d61bd105ccc99b7311"
+            "reference": "6e38bc2c0c099121f46cea49bee18df39b82ceeb"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/ITzhiwei/mysql/zipball/9871adda9fc2ff5716a219d61bd105ccc99b7311",
-            "reference": "9871adda9fc2ff5716a219d61bd105ccc99b7311",
+            "url": "https://api.github.com/repos/ITzhiwei/mysql/zipball/6e38bc2c0c099121f46cea49bee18df39b82ceeb",
+            "reference": "6e38bc2c0c099121f46cea49bee18df39b82ceeb",
             "shasum": "",
             "mirrors": [
                 {
@@ -65,7 +65,7 @@
             "lipowei/config": "^1.2",
             "php": ">=5.6.0"
         },
-        "time": "2020-03-02T01:21:19+00:00",
+        "time": "2020-04-23T14:12:50+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {

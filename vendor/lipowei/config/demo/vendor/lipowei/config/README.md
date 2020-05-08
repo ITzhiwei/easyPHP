@@ -1,19 +1,24 @@
-# Config 实现读取任意配置目录下的配置 
-## use lipowei\configClass\Config;
-## 方式1： $config = new Config; $sqlPwd = $config['sqlPwd'];  
-## 方式2： $sqlPwd = Config::pull('sqlPwd');
-## 方式1与方式2都是读取默认目录下的app.php文件配置
-## 默认配置目录为vendor的同级目录config
-实现读取配置目录下的文件中返回的数组，支持多级获取,如app.mysql.user为读取app.php文件中的mysql中的user  
-如果需要调用非app.php的配置文件，如database.php中的pwd则使用Config::pull('database.pwd');  
-如果需要设置其他目录为配置目录则：Config::$path = '自定义配置目录'；然后继续调用方式1或方式2  
-  
-配置文件的格式：
-如app.php:  
-return array(  
-	'pwd'=>'mypwd',  
-	'mysql'=>array(  
-		'user'=>'root',  
-		'password'=>'password'  
-	)  
-);
+# Config 实现读取任意配置目录下的配置  
+# 安装
+composer require lipowei/config
+# 用法
+```
+use lipowei\configClass\Config;
+//方式一：
+$config = new Config;
+$sqlUser = $config['database.username'];//获取数据库配置文件中的 username
+$sqlAll = $config['database.*'];//获取数据库配置文件中的全部信息
+
+//方式二：
+$sqlUser = Config::pull('database.username');
+$sqlAll = Config::pull('database.*');
+```
+# 配置文件所在目录
+* 默认配置目录为 vendor 的同级目录 config，如果修改配置目录，可以使用 Config::$path = 'you dir'
+
+# 其他说明
+* 支持多级获取，例如： Config::pull('a.b.c');
+* 可以不加前缀，例如： Config::pull('webName') 会自动转为 Config::pull('app.webName')
+* 有demo，demo所在：vendor/lipowei/config/demo 
+
+

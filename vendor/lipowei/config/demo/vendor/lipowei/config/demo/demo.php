@@ -10,9 +10,6 @@
     $config = new Config; 
     $data = $config['username'];
     var_dump($data);
-
-    $data = $config['*'];
-    var_dump($data);
      
     $data = $config['pwd'];
     var_dump($data);

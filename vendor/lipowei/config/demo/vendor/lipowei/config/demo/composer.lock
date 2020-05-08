@@ -11,13 +11,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ITzhiwei/Config.git",
-                "reference": "028e5fb5ac38434dd3e9f29efa1e4c44548dfc95"
+                "url": "https://github.com/ITwuzhiwei/Config.git",
+                "reference": "c92e725c7c30a4d27b98e2df860762bbcf0e4d74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ITzhiwei/Config/zipball/028e5fb5ac38434dd3e9f29efa1e4c44548dfc95",
-                "reference": "028e5fb5ac38434dd3e9f29efa1e4c44548dfc95",
+                "url": "https://api.github.com/repos/ITwuzhiwei/Config/zipball/c92e725c7c30a4d27b98e2df860762bbcf0e4d74",
+                "reference": "c92e725c7c30a4d27b98e2df860762bbcf0e4d74",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -38,12 +38,12 @@
             ],
             "authors": [
                 {
-                    "name": "zhiwei",
+                    "name": "wuzhiwei",
                     "email": "2394599321@qq.com"
                 }
             ],
-            "description": "配置类，实现读取任意配置目录下的配置，支持多级获取",
-            "time": "2020-02-11T16:07:32+00:00"
+            "description": "实现读取任意配置目录下的配置，支持多级获取，使用方法看下面",
+            "time": "2019-08-08T16:00:48+00:00"
         }
     ],
     "packages-dev": [],
