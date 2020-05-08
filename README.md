@@ -47,7 +47,7 @@
 可设置全局后置钩子（创建项目目录下 hook 包含 hookAfter.php）  
 一级目录后置钩子（在对应的一级目录内创建 hook 包含 hookAfter.php）  
 二级目录后置钩子（在对应的二级目录内创建 hook 包含 hookAfter.php）  
-* 结束后钩子
+* 结束后钩子  
 位置：用户获取请求数据后在后台执行的钩子  
 ````
 $this->fucArr[] = function() use ($phoneArr){
