@@ -3,6 +3,32 @@
 * git clone https://github.com/ITzhiwei/lipowei.git weiPHP
 * cd weiPHP
 * git clone https://github.com/ITzhiwei/wei.git  
+```
+可以多域名共同使用，路由配置文件内可设置域名的指定目录。urlEntranceData参数中设置；
+也可以一个域名设置多个目录，如前端一个，后台一个，API接口一个。assignEntranceData参数中设置
+apache 开箱即用
+nginx 配置：
+ server{
+        listen 80;
+        listen [::]:80;
+        server_name www.youurl.com;
+        location /{
+                root /www/html/weiPHP/public;
+                index index.php;
+                if (!-e $request_filename) {
+                        rewrite  ^(.*)$  /index.php?$1  last;
+                }
+        }
+        location ~ \.php$ {
+                root /www/html/weiPHP/public;
+                index index.php index.html index.htm;
+                fastcgi_pass    127.0.0.1:9000;
+                fastcgi_index   index.php;
+                fastcgi_param   SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+                include         fastcgi_params;
+        }
+    } 
+```
 # 访问入口
 程序唯一入口：public/index.php  
 # 路由（配置文件：config/route.php）
@@ -80,3 +106,13 @@ $this->fucArr[] = function() use ($phoneArr){
 mysql 错误日志记录、不同域名可设置不同的链接参数    
 # php 错误日志记录
 与 mysql 错误分别记录不同的 log 文件
+# 示例目录
+* app3 一级目录入口，默认只需要一个一级目录入口
+* application 一级目录入口，默认只需要一个一级目录入口
+* application2 一级目录入口，默认只需要一个一级目录入口
+* config 项目配置
+* extend 自定义类库
+* hook 全局钩子，里面写的代码全局执行，可写中间件；一级目录内也有一级目录钩子
+* public 该目录内的 index.php 是整个程序唯一访问入口
+* vendor composer包
+* wei 框架核心
