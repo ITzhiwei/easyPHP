@@ -42,17 +42,17 @@
     },
     {
         "name": "lipowei/db",
-        "version": "1.92",
-        "version_normalized": "1.92.0.0",
+        "version": "1.93",
+        "version_normalized": "1.93.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/ITzhiwei/mysql.git",
-            "reference": "6e38bc2c0c099121f46cea49bee18df39b82ceeb"
+            "reference": "f831d41b9dcacfc24e6f2162a0496b9dff0f13c6"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/ITzhiwei/mysql/zipball/6e38bc2c0c099121f46cea49bee18df39b82ceeb",
-            "reference": "6e38bc2c0c099121f46cea49bee18df39b82ceeb",
+            "url": "https://api.github.com/repos/ITzhiwei/mysql/zipball/f831d41b9dcacfc24e6f2162a0496b9dff0f13c6",
+            "reference": "f831d41b9dcacfc24e6f2162a0496b9dff0f13c6",
             "shasum": "",
             "mirrors": [
                 {
@@ -65,7 +65,7 @@
             "lipowei/config": "^1.2",
             "php": ">=5.6.0"
         },
-        "time": "2020-04-23T14:12:50+00:00",
+        "time": "2020-05-14T14:27:11+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
