@@ -6,7 +6,7 @@
 ```
 可以多域名共同使用，路由配置文件内可设置域名的指定目录。urlEntranceData参数中设置；
 也可以一个域名设置多个目录，如前端一个，后台一个，API接口一个。assignEntranceData参数中设置
-apache 开箱即用
+apache 开箱即用，将域名指向 public/index.php 即可
 nginx 配置：
  server{
         listen 80;
