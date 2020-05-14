@@ -98,10 +98,10 @@ $this->fucArr[] = function() use ($phoneArr){
                   }
 ````
 # 配置类
-安装 composer require lipowei/config   
+https://github.com/ITzhiwei/Config 查看使用手册   
 可获取 vendor 同级目录下 config 目录任意配置文件的参数   
 # Db 操作库
-安装 composer require lipowei/db  
+https://github.com/ITzhiwei/lipowei 查看使用手册  
 支持分布式、读写分离等模式  
 全面预处理、自动添加反引号  
 mysql 错误日志记录、不同域名可设置不同的链接参数    
