@@ -1,8 +1,8 @@
 # easyPHP 框架
 # 命令安装
-* git clone https://github.com/ITzhiwei/easyPHP.git easyPHP
+* git clone https://github.com/ITzhiwei/easyPHP.git
 * cd easyPHP
-* git clone https://github.com/ITzhiwei/easy.git  
+* git clone https://github.com/ITzhiwei/wei.git  
 ```
 可以多域名共同使用，路由配置文件内可设置域名的指定目录。urlEntranceData参数中设置；
 如使用多域名模式，若每个域名对应的数据库不一样，本框架的DB库可配置不同域名使用不同的数据库，config/lipoweiDb.php有案例
