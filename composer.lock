@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "40e24346701f984376130566cce83dac",
+    "content-hash": "b56a9b83a9cf144de2dd2f468c9d9f1e",
     "packages": [
         {
             "name": "lipowei/config",
@@ -87,6 +87,45 @@
             ],
             "description": "mysql 数据库操作；安全：全程预处理模式防SQL注入，自动添加反引号防表字段与关键词冲突；支持主从分布，支持配置参数保存；",
             "time": "2020-05-14T14:27:11+00:00"
+        },
+        {
+            "name": "lipowei/page",
+            "version": "v1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ITzhiwei/page.git",
+                "reference": "7b1e0c07eff1743dcf49f1944e27c8faf80cdcf1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ITzhiwei/page/zipball/7b1e0c07eff1743dcf49f1944e27c8faf80cdcf1",
+                "reference": "7b1e0c07eff1743dcf49f1944e27c8faf80cdcf1",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "lipowei\\smallTools\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "zhiwei",
+                    "email": "2394599321@qq.com"
+                }
+            ],
+            "description": "分页；简单+灵活，生成分页html，支持 [?|&]page=1 等普通GET模式，也支持 pathInfo 模式 /page/1",
+            "time": "2020-06-11T15:15:54+00:00"
         }
     ],
     "packages-dev": [],

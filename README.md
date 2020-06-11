@@ -103,10 +103,12 @@ $this->fucArr[] = function() use ($phoneArr){
 https://github.com/ITzhiwei/Config 查看使用手册   
 可获取 vendor 同级目录下 config 目录任意配置文件的参数   
 # Db 操作库
-https://github.com/ITzhiwei/lipowei 查看使用手册  
+https://github.com/ITzhiwei/mysql 查看使用手册  
 支持分布式、读写分离等模式  
 全面预处理、自动添加反引号  
-mysql 错误日志记录、不同域名可设置不同的链接参数    
+mysql 错误日志记录、不同域名可设置不同的链接参数  
+# 分页
+https://github.com/ITzhiwei/page  查看使用手册
 # php 错误日志记录
 与 mysql 错误分别记录不同的 log 文件
 # 示例目录
