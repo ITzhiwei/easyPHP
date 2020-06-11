@@ -3,7 +3,7 @@ namespace index\index\controller;
 use wei\controller;
 use lipowei\Db\Db;
 
-class index2 extends controller{
+class Index2 extends controller{
     
     
     public function index(){
