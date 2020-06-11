@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'lipowei\\smallTools\\' => array($vendorDir . '/lipowei/page/src'),
     'lipowei\\configClass\\' => array($vendorDir . '/lipowei/config/configClass'),
     'lipowei\\Db\\' => array($vendorDir . '/lipowei/db/src'),
 );
