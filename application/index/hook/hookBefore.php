@@ -9,6 +9,7 @@ class hookBefore
      * @return array
      */
     public function handle($obj, $oldParam, $oldPost){
+        var_dump('二级目录前置钩子执行');
         return [$obj->param, $obj->post];
     }
 }

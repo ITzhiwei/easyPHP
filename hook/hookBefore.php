@@ -6,6 +6,7 @@ class hookBefore
         date_default_timezone_set('PRC');
         if(!session_id()) session_start();
         //...
+        var_dump('全局钩子：前置执行');
         return [$obj->param, $obj->post];
     }
 }

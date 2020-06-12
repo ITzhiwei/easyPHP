@@ -11,6 +11,7 @@ class hookBefore
     public function handle($obj, $oldParam, $oldPost){
         //写代码逻辑
         //...
+        var_dump('一级目录前置钩子执行');
         return [$obj->param, $obj->post];
     }
 }

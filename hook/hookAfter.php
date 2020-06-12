@@ -7,6 +7,6 @@ class hookAfter
      * @param mixed $data 程序执行完返回的数据
      */
     public function handle($obj, $data){
-
+        var_dump('全局后置钩子，控制器方法执行完毕后的位置');
     }
 }

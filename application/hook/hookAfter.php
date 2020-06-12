@@ -9,5 +9,6 @@ class hookAfter
      * @param mixed $oldData 程序执行完返回的数据，未被任何修改
      */
     public function handle($obj, $data, $oldData){
+        var_dump('一级目录后置钩子，控制器方法执行完毕后的位置');
     }
 }
