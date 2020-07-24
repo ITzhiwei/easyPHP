@@ -35,8 +35,8 @@ return [
     'assignEntranceData'    => [
         //解释如：selectApp2：当遇到 www.xxx.com/selectApp2(或www.xxx.com/selectApp2/) 的url时触发检测
         'selectApp2'=>[false, 'application2', ['www.wei.com', 'www.weib.com', 'www.weic.com']],
-        //所有域名在遇到 www.url.com/lipowei/ 开头的url时，会直接选定 app3 入口；
-        'lipowei'=>[true, 'app3']
+        //所有域名在遇到 www.url.com/tcwei/ 开头的url时，会直接选定 app3 入口；
+        'tcwei'=>[true, 'app3']
     ]
 
 ];

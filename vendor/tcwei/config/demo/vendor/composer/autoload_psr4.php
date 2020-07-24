@@ -6,7 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'tcwei\\smallTools\\' => array($vendorDir . '/tcwei/page/src'),
     'tcwei\\configClass\\' => array($vendorDir . '/tcwei/config/configClass'),
-    'tcwei\\Db\\' => array($vendorDir . '/tcwei/db/src'),
 );

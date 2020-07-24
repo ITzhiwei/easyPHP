@@ -7,26 +7,26 @@ namespace Composer\Autoload;
 class ComposerStaticInit4db721031d31ddd1dadcab5f3d0fb81e
 {
     public static $prefixLengthsPsr4 = array (
-        'l' => 
+        't' => 
         array (
-            'lipowei\\smallTools\\' => 19,
-            'lipowei\\configClass\\' => 20,
-            'lipowei\\Db\\' => 11,
+            'tcwei\\smallTools\\' => 17,
+            'tcwei\\configClass\\' => 18,
+            'tcwei\\Db\\' => 9,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'lipowei\\smallTools\\' => 
+        'tcwei\\smallTools\\' => 
         array (
-            0 => __DIR__ . '/..' . '/lipowei/page/src',
+            0 => __DIR__ . '/..' . '/tcwei/page/src',
         ),
-        'lipowei\\configClass\\' => 
+        'tcwei\\configClass\\' => 
         array (
-            0 => __DIR__ . '/..' . '/lipowei/config/configClass',
+            0 => __DIR__ . '/..' . '/tcwei/config/configClass',
         ),
-        'lipowei\\Db\\' => 
+        'tcwei\\Db\\' => 
         array (
-            0 => __DIR__ . '/..' . '/lipowei/db/src',
+            0 => __DIR__ . '/..' . '/tcwei/db/src',
         ),
     );
 

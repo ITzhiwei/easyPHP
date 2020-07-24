@@ -1,31 +1,25 @@
 [
     {
-        "name": "lipowei/config",
-        "version": "1.3",
-        "version_normalized": "1.3.0.0",
+        "name": "tcwei/config",
+        "version": "v2.0",
+        "version_normalized": "2.0.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/ITzhiwei/Config.git",
-            "reference": "5210b7ca1ba18337533a86ae4351837f700b4e84"
+            "reference": "c12bb8e75348214c622029742fd3cf74cb3f3eeb"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/ITzhiwei/Config/zipball/5210b7ca1ba18337533a86ae4351837f700b4e84",
-            "reference": "5210b7ca1ba18337533a86ae4351837f700b4e84",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
+            "url": "https://api.github.com/repos/ITzhiwei/Config/zipball/c12bb8e75348214c622029742fd3cf74cb3f3eeb",
+            "reference": "c12bb8e75348214c622029742fd3cf74cb3f3eeb",
+            "shasum": ""
         },
-        "time": "2020-05-08T07:46:58+00:00",
+        "time": "2020-06-28T06:27:48+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "lipowei\\configClass\\": "configClass/"
+                "tcwei\\configClass\\": "configClass/"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -41,36 +35,30 @@
         "description": "配置类，实现读取任意配置目录下的配置，支持多级获取"
     },
     {
-        "name": "lipowei/db",
-        "version": "1.93",
-        "version_normalized": "1.93.0.0",
+        "name": "tcwei/db",
+        "version": "v1.0",
+        "version_normalized": "1.0.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/ITzhiwei/mysql.git",
-            "reference": "f831d41b9dcacfc24e6f2162a0496b9dff0f13c6"
+            "reference": "fd28cd3fa6b5e316b0489793fa0da059233ddc76"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/ITzhiwei/mysql/zipball/f831d41b9dcacfc24e6f2162a0496b9dff0f13c6",
-            "reference": "f831d41b9dcacfc24e6f2162a0496b9dff0f13c6",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
+            "url": "https://api.github.com/repos/ITzhiwei/mysql/zipball/fd28cd3fa6b5e316b0489793fa0da059233ddc76",
+            "reference": "fd28cd3fa6b5e316b0489793fa0da059233ddc76",
+            "shasum": ""
         },
         "require": {
-            "lipowei/config": "^1.2",
-            "php": ">=5.6.0"
+            "php": ">=5.6.0",
+            "tcwei/config": "^2.0"
         },
-        "time": "2020-05-14T14:27:11+00:00",
+        "time": "2020-06-26T16:31:53+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "lipowei\\Db\\": "src/"
+                "tcwei\\Db\\": "src/"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -86,32 +74,26 @@
         "description": "mysql 数据库操作；安全：全程预处理模式防SQL注入，自动添加反引号防表字段与关键词冲突；支持主从分布，支持配置参数保存；"
     },
     {
-        "name": "lipowei/page",
-        "version": "v1.2",
-        "version_normalized": "1.2.0.0",
+        "name": "tcwei/page",
+        "version": "v3.0",
+        "version_normalized": "3.0.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/ITzhiwei/page.git",
-            "reference": "7b1e0c07eff1743dcf49f1944e27c8faf80cdcf1"
+            "reference": "0affbbed767d99e19031f24f590f64da1d752999"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/ITzhiwei/page/zipball/7b1e0c07eff1743dcf49f1944e27c8faf80cdcf1",
-            "reference": "7b1e0c07eff1743dcf49f1944e27c8faf80cdcf1",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
+            "url": "https://api.github.com/repos/ITzhiwei/page/zipball/0affbbed767d99e19031f24f590f64da1d752999",
+            "reference": "0affbbed767d99e19031f24f590f64da1d752999",
+            "shasum": ""
         },
-        "time": "2020-06-11T15:15:54+00:00",
+        "time": "2020-06-26T14:26:13+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "lipowei\\smallTools\\": "src/"
+                "tcwei\\smallTools\\": "src/"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -124,6 +106,6 @@
                 "email": "2394599321@qq.com"
             }
         ],
-        "description": "分页；简单+灵活，生成分页html，支持 [?|&]page=1 等普通GET模式，也支持 pathInfo 模式 /page/1"
+        "description": "PHP 分页 ，支持ajax模式和普通跳转模式，内置4种分页样式，也可前端自定义样式。通过参数可控制其中的部件是否显示。"
     }
 ]

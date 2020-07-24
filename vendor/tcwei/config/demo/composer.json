@@ -1,0 +1,5 @@
+{
+    "require": {
+        "tcwei/config": "dev-master"
+    }
+}

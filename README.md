@@ -5,7 +5,7 @@
 * git clone https://github.com/ITzhiwei/wei.git  
 ```
 可以多域名共同使用，路由配置文件内可设置域名的指定目录。urlEntranceData参数中设置；
-如使用多域名模式，若每个域名对应的数据库不一样，本框架的DB库可配置不同域名使用不同的数据库，config/lipoweiDb.php有案例
+如使用多域名模式，若每个域名对应的数据库不一样，本框架的DB库可配置不同域名使用不同的数据库，config/tcweiDb.php有案例
 也可以一个域名设置多个目录，如前端一个，后台一个，API接口一个。assignEntranceData参数中设置
 
 apache 开箱即用，将域名指向 public/index.php 即可
@@ -62,7 +62,7 @@ nginx 配置：
         //解释如：selectApp2：当遇到 www.xxx.com/selectApp2(或www.xxx.comselectApp2/) 的url时触发检测
         'selectApp2'=>[false, 'application2', ['www.wei.com', 'www.weib.com', 'www.weic.com']],
         //所有域名在遇到 www.url.com/app3/ 开头的url时，会直接选定 app3 入口
-        'lipowei'=>[true, 'app3']
+        'tcwei'=>[true, 'app3']
   ]
 ```
 # 钩子

@@ -1,7 +1,6 @@
 {
     "require": {
-        "lipowei/config": "^1.2",
-        "lipowei/db": "^1.7",
-        "lipowei/page": "^1.2"
+        "tcwei/db": "^1.0",
+        "tcwei/page": "^3.0"
     }
 }

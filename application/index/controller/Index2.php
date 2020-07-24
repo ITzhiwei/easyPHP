@@ -1,7 +1,7 @@
 <?php
 namespace index\index\controller;
 use wei\controller;
-use lipowei\Db\Db;
+use tcwei\Db\Db;
 
 class Index2 extends controller{
     

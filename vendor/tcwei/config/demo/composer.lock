@@ -1,0 +1,59 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "7fb075a1cda4452cf73cb290928f87ba",
+    "packages": [
+        {
+            "name": "tcwei/config",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ITzhiwei/Config.git",
+                "reference": "028e5fb5ac38434dd3e9f29efa1e4c44548dfc95"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ITzhiwei/Config/zipball/028e5fb5ac38434dd3e9f29efa1e4c44548dfc95",
+                "reference": "028e5fb5ac38434dd3e9f29efa1e4c44548dfc95",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "tcwei\\configClass\\": "configClass/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "zhiwei",
+                    "email": "2394599321@qq.com"
+                }
+            ],
+            "description": "配置类，实现读取任意配置目录下的配置，支持多级获取",
+            "time": "2020-02-11T16:07:32+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "tcwei/config": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

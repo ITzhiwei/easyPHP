@@ -2,11 +2,11 @@
 namespace index\index\controller;
 use mjxAPP\doukuaitui\controller\userInfo;
 use wei\controller;
-use lipowei\Db\Db;
+use tcwei\Db\Db;
 use wei\Factory;
-use lipowei\configClass\Config;
+use tcwei\configClass\Config;
 use extend\Test;
-use lipowei\smallTools\Page;
+use tcwei\smallTools\Page;
 
 class Index extends controller{
 
