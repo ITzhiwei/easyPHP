@@ -84,7 +84,8 @@ $this->fucArr[] = function() use ($phoneArr){
                         ...
                   }
 ````
-# 工厂自助管理类
+# 工厂容器自助管理类  
+支持自动依赖注入  
 自助单例管理类，可设置别名重新实例化  
 在获取类时，使用 wei\Factory::get($className) 可进行注入并自动单例管理，可用别名new新的类如::get($className , 'two')   
 # 控制器基类
