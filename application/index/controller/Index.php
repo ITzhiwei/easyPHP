@@ -10,8 +10,18 @@ use tcwei\smallTools\Page;
 
 class Index extends controller{
 
-    public function index(){
+    public function index(Index3 $index3, Test $Test){
 
+        var_dump('Hello World!');
+
+        /* 控制反转模式
+        $index3->hi();
+        //$Test = Factory::get('extend\Test');
+        $Test->index();
+        //smg()里面自动注入了 index\index\controller\Index2
+        $Test->smg();
+        */
+        /*
         echo '<h2>使用扩展库</h2>';
         $Test = new Test();
         $Test->index();
@@ -33,7 +43,7 @@ class Index extends controller{
         //该控制器的调用不执行后置钩子
         $a->runHookAfter = false;
         $a->fucName = 'hello';
-        //将用户请求结束后需要执行的内容交出来执行,然后必须重置为[]
+        //如果存在fucArr，将用户请求结束后需要执行的内容交出来执行,然后必须重置为[]
         foreach ($a->fucArr as $value){
             $this->fucArr[] = $value;
         }
@@ -44,7 +54,7 @@ class Index extends controller{
         echo '<br/><hr/><h2>视图文件使用</h2>';
         return $this->view(['aaa']);
 
-
+*/
 
     }
     
